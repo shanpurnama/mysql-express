@@ -1,17 +1,19 @@
+
+require('dotenv').config()
+
+
 const express = require('express')
+const bodyParser = require('body-parser')
 const app = express()
 const port = 3000
 
-// var coba = require('./controllers/clubController')
-// coba.clubsController('clubsController')
-
-
-var bodyParser = require('body-parser')
 app.use(bodyParser.json())
 
-var clubRouter = require('./routes/club')
+console.log('==============>',process.env.DB_HOST)
+
+const clubRouter = require('./routes/club')
 app.use('/clubs', clubRouter,)
-var playerRouter = require('./routes/player')
+const playerRouter = require('./routes/player')
 app.use('/players', playerRouter)
 
 

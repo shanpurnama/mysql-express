@@ -1,4 +1,4 @@
-var clubDB = require('../clubDB')
+var clubDB = require('../models/clubDB')
 
 
 function getPlayerController(req, res) {

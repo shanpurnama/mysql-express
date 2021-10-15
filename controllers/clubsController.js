@@ -1,4 +1,4 @@
-const clubDB = require('../clubDB')
+const clubDB = require('../models/clubDB')
 
 function getClubController (req, res) {
     clubDB.query('SELECT * FROM clubs', function (err, dataClub) {
